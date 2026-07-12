@@ -104,7 +104,7 @@ int liquid_cplxpair(float complex * _z,
             continue;
 
         if (cimagf(_z[i]) > _tol) {
-            fprintf(stderr,"warning, liquid_cplxpair(), complex numbers cannot be paired\n");
+            return liquid_error(LIQUID_ENOCONV,"liquid_cplxpair(), complex numbers cannot be paired within tolerance");
         } else {
             _p[k++] = _z[i];
             paired[i] = 1;
