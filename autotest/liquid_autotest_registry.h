@@ -136,6 +136,10 @@ extern struct liquid_autotest_s crc8_s;
 extern struct liquid_autotest_s crc16_s;
 extern struct liquid_autotest_s crc24_s;
 extern struct liquid_autotest_s crc32_s;
+extern struct liquid_autotest_s crc8_testvector_s;
+extern struct liquid_autotest_s crc16_testvector_s;
+extern struct liquid_autotest_s crc24_testvector_s;
+extern struct liquid_autotest_s crc32_testvector_s;
 extern struct liquid_autotest_s crc_config_s;
 // ./src/fec/tests/fec_rep5_autotest.c
 extern struct liquid_autotest_s rep5_codec_s;
@@ -1618,6 +1622,10 @@ liquid_autotest liquid_autotest_registry[] =
     &crc16_s,
     &crc24_s,
     &crc32_s,
+    &crc8_testvector_s,
+    &crc16_testvector_s,
+    &crc24_testvector_s,
+    &crc32_testvector_s,
     &crc_config_s,
     &rep5_codec_s,
     &secded3932_codec_e0_s,
