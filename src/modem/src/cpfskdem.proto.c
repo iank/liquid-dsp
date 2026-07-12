@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2007 - 2024 Joseph Gaeddert
+ * Copyright (c) 2007 - 2026 Joseph Gaeddert
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -145,10 +145,8 @@ CPFSKDEM() CPFSKDEM(_create)(unsigned int _bps,
 
     // coherent or non-coherent?
     // TODO: allow user to specify
-    if (q->h > 0.66667f) {
-        //cpfskdem_init_noncoherent(q);
-        fprintf(stderr,"warning: cpfskdem_create(), coherent demodulation with h > 2/3 not recommended\n");
-    }
+    if (q->h > 0.66667f)
+        { liquid_log_warn("cpfskdem_create(), coherent demodulation with h > 2/3 not recommended"); }
     CPFSKDEM(_init_noncoherent)(q);
 
     // reset modem object
